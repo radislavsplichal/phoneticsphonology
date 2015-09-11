@@ -1,0 +1,21 @@
+body {
+  padding-top: 50px;
+  
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+#sides{
+margin:0;
+}
+#menu{
+float:left;
+width:25%;
+overflow:hidden;
+}
+#exercise{
+float:left;
+width:75%;
+overflow:hidden;
+} 
