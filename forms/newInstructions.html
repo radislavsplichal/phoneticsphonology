@@ -1,0 +1,34 @@
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<template name="newInstructions">
+    <form class="newInstruction" action="insertInstructions.js">
+        
+        <h1>Insert New Instructions for Exercise #</h1>
+        
+        <div class="form-group">
+
+            <label for="name">Title:</label>
+            <input type="text" class="form-control" label="heading" id="name" name="heading" placeholder="Totaly awesome title!">
+        </div>
+
+
+        <div class="form-group">
+            <label for="name">Instructions</label>
+            <input type="text" class="form-control" label="Instructions" id="instructions" name="instructions" placeholder="Instructions here!">
+
+
+
+        </div>
+        <div class='form-group'>
+            <label for="name">Instructions</label>
+            <textarea class="form-control" label="Instructions" id="instructions" name="instructions" placeholder="Instructions here!" rows="3"></textarea>
+
+        </div>
+        <button type="submit" value="Submit">Update</button>
+    </form>
+</template>
