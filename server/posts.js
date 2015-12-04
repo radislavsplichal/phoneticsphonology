@@ -7,7 +7,7 @@
 Meteor.publish('posts', function() { return Posts.find();
 });
 
-if (Posts.find() === 0) {
+if (Posts.find().count() === 0) {
     Posts.insert({
         title: 'My Awesome Posts',
         author: 'Radislav Ruda',
