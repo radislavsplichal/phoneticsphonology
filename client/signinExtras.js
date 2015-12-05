@@ -1,5 +1,5 @@
 Accounts.ui.config({
-    requestPermissions: {},
+    
     extraSignupFields: [{
         fieldName: 'first-name',
         fieldLabel: 'First name',
