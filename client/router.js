@@ -2,6 +2,9 @@ Router.configure({
   layoutTemplate: 'layout'
 });
 Router.route('/', function() {
+    this.render('landing');
+});
+Router.route('/theory', function() {
     this.render('postsList');
 });
 Router.route('/newArticle', function() {
@@ -15,7 +18,9 @@ Router.route('/exercisesByCategory', function(){
   }
   });
 });
-
+Router.route('/tech', function() {
+    this.render('tech');
+});
 Router.route("/exercises/:type", function(){
   this.render("exercisesSorted", {
     data: function(){

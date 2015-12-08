@@ -1,6 +1,6 @@
 Meteor.publish('exercises', function() { return Exercises.find();
 });
-if(Exercises.find().count() === 0) {
+if(Exercises.find().count() === 3) {
   Exercises.insert({
     type: 'odd-one-out',
     title: "Odd one out",

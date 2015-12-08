@@ -1,3 +1,5 @@
+<!-- // This is the main layout that is always rendered. The {{>yield}} tag marks the section. -->
+
 <template name="layout">
   <header>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -14,7 +16,12 @@
             <div id="navbar" class="navbar-collapse collapse">
 
                <ul class="nav navbar-nav">
-                   <li class="active"><a href="/exercisesByCategory">Exercises</a></li>
+
+                    <li class="active"><a href="/theory">Theory</a></li>
+                    <li class="active"><a href="/exercisesByCategory">Exercises</a></li>
+                    <li class="active"><a href="/tech">About&Tech</a></li>
+
+
                </ul>
                <ul class="nav navbar-nav navbar-right">
                    {{> loginButtons}} <!-- here -->
@@ -24,21 +31,20 @@
     </nav>
   </header>
 
+  <div class="panel panel-default">
+    <div class="panel-body">
+        {{>yield}}
+    </div>
+    <div class="panel-footer">
+      <footer>
+          <p>&copy;TULLIP 2015</p>
+          <p>This portal is a joint work of Jakub Krejči and Radislav Šplichal as a SVUC project.
+            You can get more information about the technology we use in the tech section of this website.</p>
 
-  <div id="news" class="container">
-      <!-- Example row of columns -->
-      {{>yield}}
+      </footer>
 
-      <hr>
-
-
-  </div> <!-- /container -->
+    </div>
+  </div>
 
 
-  <footer>
-      <p>&copy;TULLIP 2015</p>
-      <p>This portal is a joint work of Jakub Krejči and Radislav Šplichal as a SVUC project.
-        You can get more information about the technology we use in the tech section.</p>
-
-  </footer>
 </template>
