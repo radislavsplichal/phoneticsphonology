@@ -1,0 +1,7 @@
+<template name="exercisesSorted">
+  {{#each this}}
+
+  <a href="{{pathFor route='exercises.show'}}"><h1>{{title}}</h1></a>
+  <p>{{instructions}}</p>
+  {{/each}}
+</template>
