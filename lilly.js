@@ -1,9 +1,16 @@
 if(Meteor.isClient){
 
-Template.exerciseDetail.events({
-  'submit .js-verify': function(event){
-    var x = event.target.option.value;
-    console.log(x);
-  }
-});
+  Template.exerciseDetail.events({
+    'submit form': function(event, template){
+      event.preventDefault();
+
+      var selected = template.findAll( "input[type=checkbox]:checked");
+      var array = _.map(selected, function(item) {
+         return item.defaultValue;
+       });
+
+       console.log(array);
+    }
+  });
+
 }
