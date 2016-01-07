@@ -4,3 +4,6 @@ img {
    margin-left: auto;
    margin-right: auto
 }
+.exdetail li {
+    display: inline;
+}

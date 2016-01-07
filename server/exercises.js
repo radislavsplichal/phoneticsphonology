@@ -5,7 +5,8 @@ if(Exercises.find().count() === 3) {
     type: 'odd-one-out',
     title: "Odd one out",
     instructions: 'Read the list of words. Which of the underlined sounds is different? Click on the word.',
-    options: ['cat', 'fan', 'many', 'attack', 'pack', 'sang', 'dad', 'happy', 'back', 'sad']
+    options: ['cat', 'fan', 'many', 'attack', 'pack', 'sang', 'dad', 'happy', 'back', 'sad'],
+    solution: ['attack']
   })
   Exercises.insert({
     type: 'odd-one-out',
