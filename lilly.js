@@ -11,8 +11,21 @@ if(Meteor.isClient){
 
        console.log(array);
        console.log(exercisesID);
+       Meteor.call('verifyExercise', array, exercisesID, function (error, result){
+         if (result) {
+         console.log("Correct!");
+       } else {
+         console.log("You got it Wrong!")
+       }
+       console.log(error);
+
+
+
+
+
+       })
     }
   });
-  Meteor.call('verifyExercise', array, exercisesID )
+
 
 }
