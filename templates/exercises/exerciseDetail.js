@@ -35,11 +35,8 @@ Template.exerciseDetail.events({
        template.state.set('message', "Bad Job!");
      }
      console.log(error);
-
-
-
-     })
-  }
+   })
+}
 });
 
 
