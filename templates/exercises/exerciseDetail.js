@@ -1,21 +1,26 @@
 if(Meteor.isClient){
-  Template.exerciseDetail.created = function (){
+  Template.MasterTemplate.created = function (){
 
     this.state = new ReactiveDict();
     this.state.set('message', "N/A");
     console.log(this.state);
   }
 
-Template.exerciseDetail.helpers({
+Template.MasterTemplate.helpers({
    state : function(){
     console.log(this.state +"helpers");
-    return Template.instance().state.get('message');
+    return Template.instance().state;
 
+  },
+
+   allData: function(){
+     console.log("I am called");
+     return {"aa":"bb"};
    }
 
 
 });
-Template.exerciseDetail.events({
+Template.MasterTemplate.events({
   'submit form': function(event, template){
     event.preventDefault();
     var exercisesID = event.target.exercisesID.value

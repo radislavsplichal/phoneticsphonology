@@ -42,7 +42,7 @@ Router.route("/exercises/:type", function(){
 Router.route("/exercisesID/:_id/:type", function(){
 
 
-  this.render("exerciseDetail" + this.params.type, {
+  this.render("MasterTemplate", {
     data: function(){
       // console.log(Exercises.findOne({_id: this.params._id}));
       return Exercises.findOne({_id: this.params._id,type: this.params.type});
