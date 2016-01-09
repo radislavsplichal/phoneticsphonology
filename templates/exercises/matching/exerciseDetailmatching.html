@@ -1,0 +1,21 @@
+<template name="exerciseDetailmatching">
+
+  <h1>{{title}}</h1>
+    <p>{{instructions}}</p>
+    <p> this is a mathing exercise </p>
+<form>
+  <input name=exercisesID type="hidden" value={{_id}} >
+  <div class="exdetail">
+    <ul>
+
+      {{#each options}}
+      <div class="js-option">
+      <input name="option" type="checkbox" value={{this}}> <li>{{this}}</li>
+      </div>
+      {{/each}}
+    </ul>
+  </div>
+  <button type="submit" class="btn btn-default js-verify">Submit your Anwnser</button>
+  {{state}}
+</form>
+</template>

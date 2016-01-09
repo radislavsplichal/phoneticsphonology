@@ -1,6 +1,8 @@
-<template name="exerciseDetail">
+<template name="exerciseDetailodd-one-out">
 
-  <h1>{{title}}</h1>
+<!--  Template for odd-one-out exercise      -->
+
+<h1>{{title}}</h1>
     <p>{{instructions}}</p>
 <form>
   <input name=exercisesID type="hidden" value={{_id}} >
@@ -9,7 +11,7 @@
 
       {{#each options}}
       <div class="js-option">
-      <li>{{this}}</li> <input name="option" type="checkbox" value={{this}}>
+      <input name="option" type="checkbox" value={{this}}> <li>{{this}}</li>
       </div>
       {{/each}}
     </ul>
