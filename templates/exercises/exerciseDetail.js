@@ -1,5 +1,5 @@
 if(Meteor.isClient){
-  Template.exerciseDetail.created = function () {
+  Template.exerciseDetail.created = function (){
 
     this.state = new ReactiveDict();
     this.state.set('message', "N/A");
