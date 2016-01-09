@@ -21,3 +21,4 @@ twbs:bootstrap
 iron:router
 accounts-password
 ian:accounts-ui-bootstrap-3
+reactive-dict
