@@ -10,7 +10,22 @@
 
       {{#each options}}
       <div class="js-option">
-      <input name="option" type="checkbox" value={{this}}> <li>{{this}}</li>
+    <table>
+      <th>
+        <td>{{option1}} A</td>
+        <td>{{option2}} H</td>
+      </th>
+      <tr>
+        <td>
+          <input name="option1" type="checkbox" value="1">
+        </td>
+        <td>
+          <input name="option2" type="checkbox" value="2">
+        </td>
+        <td><li>{{this}}</li></td>
+      </tr>
+
+    </table>
       </div>
       {{/each}}
     </ul>

@@ -1,4 +1,12 @@
 if(Meteor.isServer){
+
+var curUser = Meteor.userId();
+
+  function progressCheck (curUser, exercisesID){
+      
+  };
+
+
 Meteor.methods({
   verifyExercise: function(array, exercisesID){
     console.log("hello!");
@@ -8,11 +16,10 @@ Meteor.methods({
     console.log('id=' + exercisesID);
     console.log(answer);
 
-    
-
 
     if (JSON.stringify(array) === JSON.stringify(answer) ){
       console.log("got it right shithead");
+
       return true;
     } else {
       return false;
