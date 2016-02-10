@@ -14,6 +14,10 @@ Router.route('/tech', function() {
     this.render('tech');
 });
 
+Router.route('/testMenu', function() {
+    this.render('testMenu');
+});
+
 Router.route('/newArticle', function() {
     this.render('newArticle');
 });
