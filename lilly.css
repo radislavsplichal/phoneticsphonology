@@ -2,7 +2,7 @@
 img {
     display: block;
    margin-left: auto;
-   margin-right: auto
+   margin-right: auto;
 }
 
 .js-option li {
@@ -10,5 +10,13 @@ img {
     margin: 15px;
     margin-top: 15px;
     margin-bottom: 15px;
-    
+
+}
+section {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#theory {
+  margin-top: 50px;
 }

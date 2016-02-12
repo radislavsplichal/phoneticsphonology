@@ -1,6 +1,6 @@
 body {
   padding-top: 50px;
-  
+
 }
 .starter-template {
   padding: 40px 15px;
@@ -18,4 +18,7 @@ overflow:hidden;
 float:left;
 width:75%;
 overflow:hidden;
-} 
+}
+#theory {
+  margin-top: 50px;
+}
