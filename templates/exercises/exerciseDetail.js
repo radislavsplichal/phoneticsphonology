@@ -9,7 +9,7 @@ if(Meteor.isClient){
 Template.MasterTemplate.helpers({
    state : function(){
     console.log(this.state +"helpers");
-    return Template.instance().state;
+    return Template.instance().state.get('message');
 
   },
 
