@@ -2,7 +2,7 @@ if(Meteor.isClient){
   Template.MasterTemplate.created = function (){
 
     this.state = new ReactiveDict();
-    this.state.set('message', "N/A");
+    this.state.set('message', {});
     console.log(this.state);
   }
 
@@ -34,10 +34,16 @@ Template.MasterTemplate.events({
      Meteor.call('verifyExercise', array, exercisesID, function (error, result){
        if (result) {
        console.log("Correct!");
-       template.state.set('message', "Good Job!");
+       template.state.set('message', {
+          text : "Good Job!",
+          type : "alert-success"
+        });
      } else {
        console.log("You got it Wrong!");
-       template.state.set('message', "Bad Job!");
+       template.state.set('message', {
+         text: "Bad Job!",
+         type: "alert-danger"
+       });
      }
      console.log(error);
    })
