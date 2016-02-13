@@ -1,4 +1,5 @@
 <template name="MasterTemplate">
+  {{> exerciseHeading title=title instructions=instructions }}
   <div class="alert {{state.type}}" role="alert">{{state.text}}</div>
   {{> Template.dynamic template=type data=this }}
 </template>
