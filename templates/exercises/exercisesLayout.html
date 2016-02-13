@@ -1,9 +1,14 @@
 <template name="exercises">
 
-
     {{#each exercises}}
-      <a href="{{pathFor route='exercises.show'}}"><h1>{{title}}</h1></a>
-      <p>{{instructions}}</p>
+
+      <div class="list-group">
+        <a href="{{pathFor route='exercises.show'}}" class="list-group-item active">
+          <h4 class="list-group-item-heading">{{title}}</h4>
+          <p class="list-group-item-text">{{instructions}}</p>
+        </a>
+      </div>
+
     {{/each}}
 
 </template>
