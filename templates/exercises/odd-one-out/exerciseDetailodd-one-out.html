@@ -3,8 +3,9 @@
 <!--  Template for odd-one-out exercise      -->
 
 <h1>{{title}}</h1>
-    <p>{{instructions}}</p>
-<form>
+<p>{{instructions}}</p>
+
+  <form>
   <input name=exercisesID type="hidden" value={{_id}} >
   <input name=type type="hidden" value={{type}}>
   <div class="exdetail">
@@ -17,7 +18,6 @@
       {{/each}}
     </ul>
   </div>
-  <button type="submit" class="btn btn-default js-verify">Submit your Anwnser</button>
-  {{aa}}
+  <button type="submit" class="btn btn-default btn-primary js-verify">Submit your Answer</button>
 </form>
 </template>
