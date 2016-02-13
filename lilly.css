@@ -1,10 +1,13 @@
-
 /* CSS declarations go here */
-* {margin:0;padding:0;}
+* {
+    margin: 0;
+    padding: 0;
+}
+
 img {
     display: block;
-   margin-left: auto;
-   margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .js-option li {
@@ -14,24 +17,36 @@ img {
     margin-bottom: 15px;
 
 }
+
 section {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
 }
+
 .theory {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
-html, body {height: 100%;}
+html, body {
+    height: 100%;
+}
 
-.page {min-height: 100%;}
+.page {
+    min-height: 100%;
+}
 
-section {overflow:auto;
-	padding-bottom: 100px;}  /* must be same height as the footer */
+section {
+    overflow: auto;
+    padding-bottom: 81px;
+}
 
-footer {position: relative;
-	margin-top: -100px; /* negative value of footer height */
-	height: 100px;
-	clear:both;}
+/* must be same height as the footer */
+
+footer {
+    position: relative;
+    margin-top: -81px; /* negative value of footer height */
+    height: 81px;
+    clear: both;
+}
