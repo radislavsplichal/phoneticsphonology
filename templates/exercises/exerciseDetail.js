@@ -40,7 +40,7 @@ Template.MasterTemplate.events({
         } else {
           console.log("You got it Wrong!");
           template.state.set('message', {
-            text: "Bad Job!",
+            text: "Not quite right. Try another time!",
             type: "alert-danger"
           });
         }
@@ -69,7 +69,7 @@ Template.MasterTemplate.events({
        } else {
          console.log("You got it Wrong!");
          template.state.set('message', {
-           text: "Bad Job!",
+           text: "Not quite right. Try another time!",
            type: "alert-danger"
          });
        }
