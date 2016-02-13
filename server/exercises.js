@@ -1,6 +1,41 @@
 Meteor.publish('exercises', function() { return Exercises.find();
 });
+Meteor.publish('categories', function() { return Categories.find();
+});
+if (Categories.find().count() === 0) {
+  Categories.insert({
+    type:"odd-one-out",
+    name:"Odd One Out",
+    instructions:"Read the list of words. Choose the one that does not fit!"
+
+  })
+  Categories.insert({
+    type:"matching",
+    name:"Matching",
+    instructions:"Read the list of words and choose right phoneme which the word contains!"
+
+  })
+
+}
+
+
+
+
+
 if(Exercises.find().count() === 3) {
+  Exercises.insert({
+    type: 'odd-one-out',
+    title: "Odd one out /æ/ vs /e/",
+    desctription: "",
+    options: ['cat', 'fan', 'many', 'attack', 'pack', 'sang', 'dad', 'happy', 'back', 'sad'],
+    solution: ['attack']
+  })
+  Exercises.insert({
+    type: 'odd-one-out',
+    title: "Odd one out 2",
+    instructions: 'Read the list of words. Which of the underlined sounds is different? Click on the word.',
+    options: ['fat', 'rat', 'bunny', 'brat', 'pack', 'sang', 'dad', 'happy', 'back', 'sad']
+  })
 
   Exercises.insert({
     type: 'matching',

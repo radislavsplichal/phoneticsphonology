@@ -25,7 +25,7 @@ Router.route('/newArticle', function() {
 Router.route('/exercisesByCategory', function(){
   this.render('exercisesCategories', {
     data: { 'categories' : function () {
-      return _.uniq(Exercises.find().map(function(x){return x.type}));
+      return Categories.find();
     }
   }
   });
