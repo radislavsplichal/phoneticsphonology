@@ -11,19 +11,27 @@
       {{#each options}}
       <div class="js-option">
     <table>
-      <th>
-        <td>{{option1}} A</td>
-        <td>{{option2}} H</td>
-      </th>
       <tr>
-        <td>
-          <input name="option1" type="checkbox" value="1">
-        </td>
-        <td>
-          <input name="option2" type="checkbox" value="2">
-        </td>
+      <div class="row">
+             <div class="col-sm-9">
+                 <div class="btn-group" data-toggle="buttons">
+                     <label class="btn btn-default">
+                         <input type="radio" id="q156" name="quality[25]" value="1" />
+                     </label>
+                     <label class="btn btn-default">
+                         <input type="radio" id="q157" name="quality[25]" value="2" /> 2
+                     </label>
+
+                 </div>
+             </div>
+         </div>
+
         <td><li>{{this}}</li></td>
-      </tr>
+
+</tr>
+
+
+
 
     </table>
       </div>
