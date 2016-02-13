@@ -1,39 +1,39 @@
 <template name="matching">
 
-    <h1>{{title}}</h1>
-    <p>{{instructions}}</p>
+    <section class="mainSection">
 
-    <form>
-        <input name=exercisesID type="hidden" value={{_id}}>
-        <input name=type type="hidden" value={{type}}>
-        <div class="exdetail">
-            <ul>
+        <h1>{{title}}</h1>
+        <p>{{instructions}}</p>
 
-                {{#each options}}
-                <div class="js-option">
-                    <table>
-                        <tr>
-                            <td>
-                                <div class="btn-group" data-toggle="buttons">
-                                    <label class="btn btn-default">
-                                        <input type="radio" name="{{this}}" value="{{../value.[0]}}"/> {{../value.[0]}}
-                                    </label>
-                                    <label class="btn btn-default">
-                                        <input type="radio" name="{{this}}" value="{{../value.[1]}}"/> {{../value.[1]}}
-                                    </label>
-                                </div>
-                            </td>
+        <form>
+            <input name=exercisesID type="hidden" value={{_id}}>
+            <input name=type type="hidden" value={{type}}>
 
-                            <td>
-                                <li>{{this}}</li>
-                            </td>
+            {{#each options}}
+            <table>
+                <tr>
+                    <td style="padding: 5px">
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-sm btn-default">
+                                <input type="radio" name="{{this}}" value="{{../value.[0]}}"/>
+                                {{../value.[0]}}
+                            </label>
+                            <label class="btn btn-sm btn-default">
+                                <input type="radio" name="{{this}}" value="{{../value.[1]}}"/>
+                                {{../value.[1]}}
+                            </label>
+                        </div>
+                    </td>
 
-                        </tr>
-                    </table>
-                </div>
-                {{/each}}
-            </ul>
-        </div>
-        <button type="submit" class="btn btn-default btn-primary js-verify">Submit your Answer</button>
-    </form>
+                    <td style="padding-left: 10px">
+                        {{this}}
+                    </td>
+
+                </tr>
+            </table>
+            {{/each}}
+            <br>
+            <button type="submit" class="btn btn-default btn-primary js-verify">Submit your Answer</button>
+        </form>
+    </section>
 </template>
