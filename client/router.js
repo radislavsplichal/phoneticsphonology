@@ -25,7 +25,15 @@ Router.route('/newArticle', function() {
 Router.route('/exercisesByCategory', function(){
   this.render('exercisesCategories', {
     data: { 'categories' : function () {
-      return Categories.find();
+        var categories = Categories.find().fetch();
+        var exercises = _.groupBy(Exercises.find().fetch(),'type')
+
+        for(var i=0;i<categories.length;i++){
+            var category = categories[i];
+            category['count'] = exercises[category['type']].length;
+        }
+        console.log(categories);
+      return categories;
     }
   }
   });
