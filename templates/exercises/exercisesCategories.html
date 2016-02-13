@@ -1,11 +1,13 @@
 <template name="exercisesCategories">
   {{#each categories}}
 
-  <ul class="list-group">
-    <li class="list-group-item"><a href="/exercises/{{this}}"><h1>{{this}}</h1></a></li>
 
-  </ul>
-
+  <div class="list-group">
+    <a href="/exercises/{{this}}" class="list-group-item active">
+      <h4 class="list-group-item-heading">{{this}}</h4>
+      <p class="list-group-item-text">#Description</p>
+    </a>
+  </div>
 
 
   {{/each}}
