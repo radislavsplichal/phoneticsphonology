@@ -27,6 +27,13 @@ section {
 
 .theory {
     margin-top: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.technologies{
+    margin-left: 14px;
+    margin-right: 14px;
 }
 
 html, body {

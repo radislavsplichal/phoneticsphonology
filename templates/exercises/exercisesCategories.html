@@ -1,14 +1,23 @@
 <template name="exercisesCategories">
-  {{#each categories}}
 
+    <div class="jumbotron">
+        <div class="container">
+            <h2>Select the type of exercise</h2>
+            <p>Select which type of exercise you want to do. Each category focuses to a particular</p>
+        </div>
+    </div>
 
-  <div class="list-group">
-    <a href="/exercises/{{this}}" class="list-group-item active">
-      <h4 class="list-group-item-heading">{{this}}</h4>
-      <p class="list-group-item-text">#Description</p>
-    </a>
-  </div>
+    <section class="mainSection">
 
+        {{#each categories}}
+        <div class="list-group">
+            <a href="/exercises/{{this}}" class="list-group-item">
+                <h4 class="list-group-item-heading">{{this}} <span class="badge">42</span></h4>
+                <p class="list-group-item-text">#Description</p>
+            </a>
+        </div>
+        {{/each}}
 
-  {{/each}}
+    </section>
+
 </template>
