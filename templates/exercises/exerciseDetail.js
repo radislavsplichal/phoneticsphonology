@@ -11,42 +11,74 @@ Template.MasterTemplate.helpers({
     console.log(this.state +"helpers");
     return Template.instance().state.get('message');
 
-  },
+  }
 
-   allData: function(){
-     console.log("I am called");
-     return {"aa":"bb"};
-   }
+
 
 
 });
 Template.MasterTemplate.events({
   'submit form': function(event, template){
     event.preventDefault();
-    var exercisesID = event.target.exercisesID.value
-    var selected = template.findAll( "input[type=checkbox]:checked");
-    var array = _.map(selected, function(item) {
-       return item.defaultValue;
-     });
+    var exercisesID = event.target.exercisesID.value;
+    var type = event.target.type.value;
+    switch (type)
+    { case "matching":
+      console.log(type);
 
-     console.log(array);
-     console.log(exercisesID);
-     Meteor.call('verifyExercise', array, exercisesID, function (error, result){
-       if (result) {
-       console.log("Correct!");
-       template.state.set('message', {
-          text : "Good Job!",
-          type : "alert-success"
-        });
-     } else {
-       console.log("You got it Wrong!");
-       template.state.set('message', {
-         text: "Bad Job!",
-         type: "alert-danger"
+      var selected = template.findAll( "input[type=radio]:checked");
+      var array = _.map(selected, function(item){
+                    return [item.value, item.name]
+                  });
+        Meteor.call('verifyExercise', array, exercisesID, function (error, result){
+          if (result) {
+          console.log("Correct!");
+          template.state.set('message', {
+             text : "Good Job!",
+             type : "alert-success"
+           });
+        } else {
+          console.log("You got it Wrong!");
+          template.state.set('message', {
+            text: "Bad Job!",
+            type: "alert-danger"
+          });
+        }
+        console.log(error);
+      })
+
+
+
+      break;
+      case "odd-one-out":
+
+      var selected = template.findAll( "input[type=checkbox]:checked");
+      var array = _.map(selected, function(item) {
+         return item.defaultValue;
        });
-     }
-     console.log(error);
-   })
+
+       console.log(array);
+       console.log(exercisesID);
+       Meteor.call('verifyExercise', array, exercisesID, function (error, result){
+         if (result) {
+         console.log("Correct!");
+         template.state.set('message', {
+            text : "Good Job!",
+            type : "alert-success"
+          });
+       } else {
+         console.log("You got it Wrong!");
+         template.state.set('message', {
+           text: "Bad Job!",
+           type: "alert-danger"
+         });
+       }
+       console.log(error);
+     })
+      break;
+  }
+
+
 }
 });
 

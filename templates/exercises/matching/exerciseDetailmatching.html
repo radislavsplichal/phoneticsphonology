@@ -4,31 +4,29 @@
     <p>{{instructions}}</p>
     <p> this is a mathing exercise </p>
 <form>
-  <input name=exercisesID type="hidden" value={{_id}} >
+  <input name=exercisesID type="hidden" value={{_id}}>
+  <input name=type type="hidden" value={{type}}>
   <div class="exdetail">
     <ul>
 
       {{#each options}}
       <div class="js-option">
-    <table>
-      <tr>
-      <div class="row">
-             <div class="col-sm-9">
-                 <div class="btn-group" data-toggle="buttons">
+        <table>
+            <tr>
+                    <td>
+                      <div class="btn-group" data-toggle="buttons">
                      <label class="btn btn-default">
-                         <input type="radio" id="q156" name="quality[25]" value="1" />
+                         <input type="radio" name="{{this}}" value="{{../value.[0]}}" /> {{../value.[0]}}
                      </label>
                      <label class="btn btn-default">
-                         <input type="radio" id="q157" name="quality[25]" value="2" /> 2
+                         <input type="radio" name="{{this}}" value="{{../value.[1]}}" /> {{../value.[1]}}
                      </label>
+                   </div>
+                   </td>
 
-                 </div>
-             </div>
-         </div>
+                     <td><li>{{this}}</li></td>
 
-        <td><li>{{this}}</li></td>
-
-</tr>
+            </tr>
 
 
 
