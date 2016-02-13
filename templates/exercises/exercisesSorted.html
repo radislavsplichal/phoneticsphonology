@@ -1,12 +1,22 @@
 <template name="exercisesSorted">
-  {{#each this}}
 
-  <div class="list-group">
-    <a href="{{pathFor route='exercises.show'}}" class="list-group-item">
-      <h4 class="list-group-item-heading">{{title}}</h4>
-      <p class="list-group-item-text">{{instructions}}</p>
-    </a>
+  <div class="jumbotron">
+    <div class="container">
+      <h2>{{category.name}}</h2>
+      <p>{{category.instructions}}</p>
+    </div>
   </div>
 
-  {{/each}}
+  <section class="mainSection">
+    {{#each exercises}}
+
+      <div class="list-group">
+        <a href="{{pathFor route='exercises.show'}}" class="list-group-item">
+          <h4 class="list-group-item-heading">{{title}}</h4>
+          <p class="list-group-item-text">{{instructions}}</p>
+        </a>
+      </div>
+
+    {{/each}}
+  </section>
 </template>

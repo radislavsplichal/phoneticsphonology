@@ -32,11 +32,16 @@ Router.route('/exercisesByCategory', function(){
 });
 
 Router.route("/exercises/:type", function(){
+  var exerciseType = this.params.type;
+    console.log('Exercise type', exerciseType);
+
   this.render("exercisesSorted", {
-    data: function(){
-      console.log(this.params);
-      // console.log(Exercises.findOne({_id: this.params._id}));
-      return Exercises.find({type: this.params.type});
+    data: {
+      'exercises':function(){
+         return Exercises.find({type: exerciseType});
+      }, 'category' : function(){
+            return Categories.findOne({type: exerciseType});
+      }
     }
   });
 
