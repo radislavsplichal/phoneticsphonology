@@ -22,3 +22,7 @@ iron:router
 accounts-password
 ian:accounts-ui-bootstrap-3
 reactive-dict
+meteorhacks:npm
+
+
+npm-container

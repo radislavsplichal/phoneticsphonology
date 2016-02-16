@@ -52,7 +52,7 @@ Template.MasterTemplate.events({
       break;
       case "odd-one-out":
 
-      var selected = template.findAll( "input[type=checkbox]:checked");
+      var selected = template.findAll( "input[type=radio]:checked");
       var array = _.map(selected, function(item) {
          return item.defaultValue;
        });

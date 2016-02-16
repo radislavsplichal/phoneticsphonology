@@ -8,7 +8,12 @@
             {{#each options}}
             <table>
                 <tr>
-                    <td style="padding: 5px">
+
+                  <td style="padding-left: 10px">
+                      {{this}}
+                  </td>
+
+                    <td style="padding: 10px">
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-sm btn-default">
                                 <input type="radio" name="{{this}}" value="{{../value.[0]}}"/>
@@ -21,9 +26,7 @@
                         </div>
                     </td>
 
-                    <td style="padding-left: 10px">
-                        {{this}}
-                    </td>
+
 
                 </tr>
             </table>

@@ -14,8 +14,8 @@ Router.route('/tech', function() {
     this.render('tech');
 });
 
-Router.route('/testMenu', function() {
-    this.render('testMenu');
+Router.route('/index', function() {
+    this.render('index');
 });
 
 Router.route('/newArticle', function() {
@@ -67,3 +67,13 @@ Router.route("/exercisesID/:_id/:type", function(){
   });
 
 },{name: 'exercises.show'});
+
+Router.route('/pdf', function() {
+    var filePath = process.env.PWD + "44phonemes.pdf";
+    var fs = Meteor.npmRequire('fs');
+    var data = fs.readFileSync(filePath);
+    this.response.write(data);
+    this.response.end();
+}, {
+    where: 'server'
+});

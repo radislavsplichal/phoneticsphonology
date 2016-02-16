@@ -22,13 +22,13 @@ if (Categories.find().count() === 0) {
 
 
 
-if(Exercises.find().count() === 3) {
+if(Exercises.find().count() === 0) {
   Exercises.insert({
     type: 'odd-one-out',
     title: "Odd one out /æ/ vs /e/",
     desctription: "",
     options: ['cat', 'fan', 'many', 'attack', 'pack', 'sang', 'dad', 'happy', 'back', 'sad'],
-    solution: ['attack']
+    solution: ['many']
   })
   Exercises.insert({
     type: 'odd-one-out',
@@ -39,7 +39,7 @@ if(Exercises.find().count() === 3) {
 
   Exercises.insert({
     type: 'matching',
-    title: 'Matching x',
+    title: 'Either Or /æ/,/e/',
     instructions:'Look at the words below. Type them in the table according to the vowel sound in the word.',
     options: ['man', 'stand', 'rest', 'rang', 'men', 'red', 'lap', 'left', 'ten', 'sat', 'bed', 'bang'],
     value: ['/æ/','/e/'],
@@ -48,7 +48,7 @@ if(Exercises.find().count() === 3) {
   })
   Exercises.insert({
     type: 'matching',
-    title: 'Matching 2',
+    title: 'Either Or 2',
     instructions:'Look at the words below. Type them in the table according to the vowel sound in the word.',
     options: ['man', 'stand', 'breast', 'suck', 'luck', 'lap', 'left', 'ten', 'sat', 'bed', 'bang'],
     value: ['/æ/','/e/']
