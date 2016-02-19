@@ -2,4 +2,5 @@
   {{> exerciseHeading title=title instructions=instructions }}
   <div class="alert {{state.type}}"  style="display: {{#if state.type}} block {{else}} none {{/if}}" role="alert">{{state.text}}</div>
   {{> Template.dynamic template=type data=this }}
+  <a href="/exercisesByCategory"><button type="button" style="display: {{#if state.type}} block {{else}} none {{/if}}" class="btn btn-warning">Go Back!</button></a>
 </template>

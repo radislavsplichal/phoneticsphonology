@@ -1,8 +1,8 @@
 <template name="newArticle">
     <form class="newArticle" >
-        
+
         <h1>Insert New Article!</h1>
-        
+        <div class="alert alert-success" role="alert">Done! Article Uploaded.</div>
         <div class="form-group">
 
             <label for="name">Title:</label>
@@ -12,14 +12,14 @@
 
         <div class="form-group">
             <label for="name">Article</label>
-            <input type="text" class="form-control" label="Instructions" id="instructions" name="instructions" placeholder="Article here!">
+            <input type="text" class="form-control" label="Text" id="instructions" name="text" placeholder="Article here!">
 
         </div>
         <div class='form-group'>
             <label for="name">Notes</label>
-            <textarea class="form-control" label="Instructions" id="instructions" name="instructions" placeholder="Instructions here!" rows="3"></textarea>
+            <textarea class="form-control" label="Side notes" id="instructions" name="notes" placeholder="Instructions here!" rows="3"></textarea>
 
         </div>
-        <button type="submit" value="Submit">Update</button>
+        <button type="submit" value="Submit">Insert Article</button>
     </form>
 </template>
