@@ -1,6 +1,7 @@
 <!-- // This is the main layout that is always rendered. The {{>yield}} tag marks the section. -->
 
 <template name="layout">
+<div id="wrapper">
   <header>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -37,7 +38,7 @@
 <div class="page">
     {{>yield}}
 </div>
-
+</div>
     <footer>
     <div class="panel-footer">
 
