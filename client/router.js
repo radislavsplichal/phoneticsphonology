@@ -21,6 +21,9 @@ Router.route('/index', function() {
 Router.route('/newArticle', function() {
     this.render('newArticle');
 });
+Router.route('/newExercise', function() {
+    this.render('newExercise');
+});
 Router.route('/administration', function() {
     this.render('administration');
 });
