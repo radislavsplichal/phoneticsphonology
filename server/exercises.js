@@ -15,12 +15,7 @@ if (Categories.find().count() === 0) {
     instructions:"Read the list of words and choose right phoneme which the word contains!"
 
   })
-  Categories.insert({
-    type:"listeningMatching",
-    name:"Mathing with Sound",
-    instructions:"Read and listen to the list of words and choose right phoneme which the word contains!"
-
-  })
+  
 
 
 }
