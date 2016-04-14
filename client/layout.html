@@ -1,50 +1,52 @@
 <!-- // This is the main layout that is always rendered. The {{>yield}} tag marks the section. -->
 
 <template name="layout">
-<div id="wrapper">
-  <header>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div id="wrapper">
+    <header>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">TULIPP</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">TULIPP</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
 
-               <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav">
 
-                    <li><a href="/index">Course</a></li>
-                    <li><a href="/exercisesByCategory">Exercises</a></li>
-                    <li><a href="/theory">News and Posts</a></li>
-                    <li><a href="/tech">About&Tech</a></li>
+              <li><a href="/index">Course</a></li>
+              <li><a href="/exercisesByCategory">Exercises</a></li>
+              <li><a href="/theory">News and Posts</a></li>
+              <li><a href="/tech">About&Tech</a></li>
 
-                    <li><a href="/administration">Administration</a></li>
+              <li><a href="/administration">Administration</a></li>
 
 
-               </ul>
-               <ul class="nav navbar-nav navbar-right">
-                   {{> loginButtons}} <!-- here -->
-               </ul>
-           </div>
-         </div>
-    </nav>
-  </header>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              {{> loginButtons}} <!-- here -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-<div class="page">
-    {{>yield}}
-</div>
-</div>
-    <footer>
+    <div class="page">
+      {{>yield}}
+    </div>
+  </div>
+  <footer class="footer">
     <div class="panel-footer">
 
-          <p>&copy;TULIPP 2016 Technical Preview</p>
-          <p>This portal is a joint work of Radislav Šplíchal and Jakub Krejčí as a SVUČ project.
-            You can get more information about the technology we use in the tech section of this website.</p>
+      <p>&copy;TULIPP 2016 Technical Preview</p>
+      <p>This portal is a joint work of Radislav Šplíchal and Jakub Krejčí as a SVUČ project.
+        You can get more information about the technology we use in the tech section of this website.</p>
     </div>
   </footer>
-</template>
+
+
+  </template>
