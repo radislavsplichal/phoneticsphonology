@@ -2,7 +2,7 @@ Meteor.publish('exercises', function() { return Exercises.find();
 });
 Meteor.publish('categories', function() { return Categories.find();
 });
-if (Categories.find().count() === 0) {
+if (Categories.find().count() === 2) {
   Categories.insert({
     type:"odd-one-out",
     name:"Odd One Out",
@@ -15,8 +15,12 @@ if (Categories.find().count() === 0) {
     instructions:"Read the list of words and choose right phoneme which the word contains!"
 
   })
-  
+  Categories.insert({
+    type:"Listening-matching",
+    name:"Listening and Matching",
+    instructions:"Read and listen to the list of words and choose right phoneme which the word contains!"
 
+  })
 
 }
 
