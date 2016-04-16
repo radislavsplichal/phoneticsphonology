@@ -2,7 +2,7 @@ Meteor.publish('exercises', function() { return Exercises.find();
 });
 Meteor.publish('categories', function() { return Categories.find();
 });
-if (Categories.find().count() === 2) {
+if (Categories.find().count() === 0) {
   Categories.insert({
     type:"odd-one-out",
     name:"Odd One Out",
