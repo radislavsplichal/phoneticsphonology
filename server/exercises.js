@@ -24,9 +24,7 @@ if (Categories.find().count() === 0) {
 
 }
 
-
-
-
+// Fixture of exercises
 
 if(Exercises.find().count() === 0) {
   Exercises.insert({

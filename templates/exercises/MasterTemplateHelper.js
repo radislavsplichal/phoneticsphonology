@@ -8,7 +8,7 @@ if(Meteor.isClient){
 
 Template.MasterTemplate.helpers({
    state : function(){
-    console.log(this.state +"helpers");
+    console.log(this.state + "helpers");
     return Template.instance().state;
 
   }

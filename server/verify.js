@@ -1,14 +1,11 @@
 if(Meteor.isServer){
 
-
-
   function progressCheck (currentUserId, exercisesID){
     if(currentUserId != undefined){
     db.progress.update({_id: currentUserId},{$addToSet:{ExercisesDone: exercisesID}},{upsert:true})
     }
 
   };
-
 
 Meteor.methods({
   verifyExercise: function(array, exercisesID){
@@ -27,7 +24,6 @@ Meteor.methods({
     } else {
       return false;
     }
-
 
   }
 });
