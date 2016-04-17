@@ -1,4 +1,4 @@
-// 
+//
 if(Meteor.isClient){
 
   function responseVerified (error, result){
@@ -40,35 +40,37 @@ if(Meteor.isClient){
       var type = event.target.type.value;
 
       // Exercise Correction Mechanism
-      switch (type)
-        { case "matching":
-            console.log(type);
+      switch (type) {
+        case "matching":
+        console.log(type);
 
-            var selected = template.findAll( "input[type=radio]:checked");
-            var array = _.map(selected, function(item){
-              return [item.value, item.name]
-            });
-                 Meteor.call('verifyExercise', array, exercisesID, function (error, result){
-                  responseVerified(error, result);
-                })
+        var selected = template.findAll( "input[type=radio]:checked");
+        var array = _.map(selected, function(item){
+          return [item.value, item.name]
+        });
+        Meteor.call('verifyExercise', array, exercisesID, function (error, result){
+          responseVerified(error, result);
+        })
 
-      break;
+        break;
 
 
-      case "odd-one-out":
+        case "odd-one-out":
 
-      var selected = template.findAll( "input[type=radio]:checked");
-      var array = _.map(selected, function(item) {
-        return item.defaultValue;
-      });
+        var selected = template.findAll( "input[type=radio]:checked");
+        var array = _.map(selected, function(item) {
+          return item.defaultValue;
+        });
 
-      console.log(array);
-      console.log(exercisesID);
-      Meteor.call('verifyExercise', array, exercisesID, function (error, result){
-        responseVerified(error, result);
-      break;
-    }
-  }
-});
+        console.log(array);
+        console.log(exercisesID);
+        Meteor.call('verifyExercise', array, exercisesID, function (error, result){
+          responseVerified(error, result);
+        })
+
+        break;
+      }
+    }}
+  );
 
 }
