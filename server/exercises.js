@@ -1,7 +1,12 @@
+// Meteor publish security feature
+
 Meteor.publish('exercises', function() { return Exercises.find();
 });
 Meteor.publish('categories', function() { return Categories.find();
 });
+
+// Fixture for Categories
+
 if (Categories.find().count() === 0) {
   Categories.insert({
     type:"odd-one-out",
@@ -78,5 +83,15 @@ if(Exercises.find().count() === 0) {
     value: ['/ʊ/','/uː/'],
     solution: [["/ʊ/","foot"],["/uː/","who"],["/uː/","hoot"],["/uː/","boot"],["/ʊ/","look"],["/uː/","lose"],["/ʊ/","pull"],["/ʊ/","shook"],["/ʊ/","took"],["/uː/","tomb"],["/ʊ/","wood"],["/uː/","fool"]]
   })
+
+
+    Exercises.insert({
+      type: 'Listening-matching',
+      title: 'Either Or /ʊ/, /uː/',
+      instructions:'Look at the words below. Select appropriate phenmic symbols accordingly to the vowel sound in the word.',
+      options: ['foot', 'who', 'hoot', 'boot', 'look', 'lose', 'pull', 'shook', 'took', 'tomb', 'wood', 'fool'],
+      value: ['/ʊ/','/uː/'],
+      solution: [["/ʊ/","foot"],["/uː/","who"],["/uː/","hoot"],["/uː/","boot"],["/ʊ/","look"],["/uː/","lose"],["/ʊ/","pull"],["/ʊ/","shook"],["/ʊ/","took"],["/uː/","tomb"],["/ʊ/","wood"],["/uː/","fool"]]
+    })
 
 }

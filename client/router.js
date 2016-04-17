@@ -54,7 +54,7 @@ Router.route("/exercisesID/:_id/:type", function(){
 
   this.render("MasterTemplate", {
     data: function(){
-      // console.log(Exercises.findOne({_id: this.params._id}));
+      //console.log(Exercises.findOne({_id: this.params._id});
       return Exercises.findOne({_id: this.params._id,type: this.params.type});
     }
   });

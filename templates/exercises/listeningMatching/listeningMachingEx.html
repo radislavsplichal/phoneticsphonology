@@ -1,11 +1,42 @@
-<template name="matchingLisnteningExercise">
-  <div id="wrapper">
-    <section class="mainSection">
+<!-- Template for Matching exercise with Listening -->
+
+<template name="Listening-matching">
 
 
+  <section class="mainSection">
+    <form>
+      <input name=exercisesID type="hidden" value={{_id}}>
+      <input name=type type="hidden" value={{type}}>
 
+      {{#each options}}
+      <table>
+        <tr>
+
+          <td style="padding-left: 10px">
+            <audio controls>
+              <source src="/audio/1st batch pairs/‘ʊ’, 'uː'/{{this}}.mp3" type="audio/mpeg">
+              </audio>
+            </td>
+
+            <td style="padding: 10px">
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-sm btn-default">
+                  <input type="radio" name="{{this}}" value="{{../value.[0]}}"/>
+                  {{../value.[0]}}
+                </label>
+                <label class="btn btn-sm btn-default">
+                  <input type="radio" name="{{this}}" value="{{../value.[1]}}"/>
+                  {{../value.[1]}}
+                </label>
+              </div>
+            </td>
+
+          </tr>
+        </table>
+        {{/each}}
+        <br>
+        <button type="submit" class="btn btn-default btn-primary js-verify">Submit your Answer</button>
+      </form>
     </section>
 
-
-  </div>
 </template>
