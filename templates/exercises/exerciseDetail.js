@@ -54,6 +54,19 @@ if(Meteor.isClient){
 
         break;
 
+        case "Listening-matching":
+        console.log(type);
+
+        var selected = template.findAll( "input[type=radio]:checked");
+        var array = _.map(selected, function(item){
+          return [item.value, item.name]
+        });
+        Meteor.call('verifyExercise', array, exercisesID, function (error, result){
+          responseVerified(error, result);
+        })
+
+        break;
+
 
         case "odd-one-out":
 
@@ -64,6 +77,7 @@ if(Meteor.isClient){
 
         console.log(array);
         console.log(exercisesID);
+        
         Meteor.call('verifyExercise', array, exercisesID, function (error, result){
           responseVerified(error, result);
         })

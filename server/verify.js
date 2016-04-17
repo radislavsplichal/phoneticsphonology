@@ -18,7 +18,7 @@ Meteor.methods({
 
 
     if (JSON.stringify(array) === JSON.stringify(answer) ){
-      console.log("got it right shithead");
+      console.log("Solution OK");
       progressCheck (currentUserId, exercisesID);
       return true;
     } else {
