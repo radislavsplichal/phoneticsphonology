@@ -1,11 +1,6 @@
 if(Meteor.isClient){
 // State of the form before submission
-  Template.newArticle.created = function (){
 
-    this.state = new ReactiveDict();
-    this.state.set('message');
-    console.log(this.state);
-  }
 
 // newArticle form handling after submission
   Template.newArticle.events({
