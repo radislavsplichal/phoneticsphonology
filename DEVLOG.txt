@@ -3,4 +3,7 @@ Development Blog
 Sprint 1 - 17.8.2016-24.8.2016
 
 1. Fix runtime issues and upgrade meteor to 1.4.
-2.
+	issue resolved / follow the instructions at: http://stackoverflow.com/questions/38849109/meteor-error-after-upgrading-to-1-4 
+	stylus package issue
+2. Fix and unify forms appearance
+
