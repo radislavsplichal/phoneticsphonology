@@ -1,6 +1,7 @@
 
 
 if(Meteor.isClient){
-  
 
+
+  
 }
